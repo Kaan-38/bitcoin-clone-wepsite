@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<style type="text/css">
+  * {margin: 0; padding: 0; box-sizing: border-box; font-family:sans-serif; font-weight: bold;}
+  body {background: #00276a;}
+  body::-webkit-scrollbar {width: 8px;}
+  body::-webkit-scrollbar-thumb {background:#001e60; border-radius: 10px;}
+  body::-webkit-scrollbar-track {background:black;}
+  .container-ortala {position: relative; display: flex; align-items: center; justify-content: center; margin-top: 30px;}
+  .container-kapsam  {position: relative; width: 1100px; height:auto; padding-bottom: 70px; background:#001e60; box-shadow: 0 0 16px black; border-radius: 17px; }
+
+  header {position: relative; width:100%; height: 78px; background:#001e60; box-shadow: 0 0 20px #001e60; border-radius: 13px 13px 0px 0px; display: flex; align-items: center; justify-content: space-between; border-bottom:1px solid black; }
+  header label {position: relative; display: flex; align-items: center; cursor: pointer; margin-left: 30px; margin-right: 30px;}
+  header label span i{position: relative; font-size: 58px; color:#87a2ff; text-shadow: 0 0 4px #87a2ff;}
+  header label h3 {position: relative; width: auto; height: 34px; background: #87a2ff; box-shadow: 0 0 12px #87a2ff; color: #001e60; text-shadow: 0 0 2px #001e60;  margin-left:20px; display: flex; align-items: center; justify-content: center; border-radius: 3px; padding-left: 13px; padding-right: 13px; letter-spacing: 1px;}
+  header label h3:hover {transform: scale(1.03);}
+  header label h3::after {content: ''; width: 0; height: 0; border-width: 13px; border-style: solid; border-color:#87a2ff transparent transparent transparent; position: absolute; transform: rotate(-270deg); left:-26px;}
+
+  header label h4 {position: relative; color: white; text-shadow: 0 0 2px white; margin-right: 28px; width: auto;
+   padding-left:12px; padding-right:12px;  height: 33px; background:none;  display: flex; align-items: center; justify-content:center; cursor: pointer; border-radius: 6px;}
+  header .header-active.active h4 {background: #87a2ff; box-shadow: 0 0 12px #87a2ff; color: #001e60; text-shadow: 0 0 2px #001e60;}
+  header label h4:hover {transform: scale(1.03);}
+  header label .header-active {display: flex; align-items: center; justify-content: center;}
+  
+  .container-kapsam2 {width: 100%; height: 100%; display: flex;}
+  
+
+  main {position: relative; width:100%; height: 100%; display: flex; flex-direction: column; justify-content: center; }
+  
+  .main-icon{ display: flex; align-items: center; justify-content: center; cursor: pointer; width:430px;}
+  .main-icon ion-icon {font-size: 116px; color:#87a2ff; position: absolute; top: 36px; animation: main-icon 5s linear infinite;}
+  @keyframes main-icon{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(30deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(-30deg);}
+    100%{transform: rotate(0deg);}
+}
+
+  main label {position: relative; margin-left: 20px; max-width:430px; cursor: pointer; font-size: 23px; margin-bottom:20px; top: 180px;}
+  main label h3 {position: relative; width:auto; height: 44px; background: #87a2ff; box-shadow: 0 0 12px #87a2ff; color: #001e60; text-shadow: 0 0 2px #001e60; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 26px;}
+  main label h4 {position: relative; color: #87a2ff; text-shadow: 0 0 2px #87a2ff;}
+  main label h5  {position: relative; width: 160px; height: 44px; background: #87a2ff; box-shadow: 0 0 12px #87a2ff; color: #001e60; text-shadow: 0 0 2px #001e60; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 20px;}
+  main label h5:hover {transform: scale(1.03);}
+  
+
+  main ul {position:relative; list-style-type: none; display: flex; margin-top: 210px;  margin-left:20px;}
+  main ul li {position: relative; width:21px; height: 21px; border-radius:50%; background:#87a2ff; box-shadow: 0 0 5px #87a2ff; margin: 11px; cursor: pointer;}
+
+
+
+
+
+
+  .container-menü{position: relative; width:100%; height: 100%;  }
+
+  .bitcoin-ion-icon{ position: relative; display: flex; align-items: center; justify-content:flex-end;  margin-right:21px; margin-top: 90px; }
+  .bitcoin-ion-icon i  {font-size: 370px; color:#87a2ff; text-shadow: 0 0 4px #87a2ff;}
+
+
+  .bitcoin-ion-icon label {position: relative; width:200px; height: 100px; background:#87a2ff; box-shadow: 0 0 14px black; border-radius: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-top:-110px; margin-left: 10px; animation: kara 5s linear infinite;}
+  @keyframes kara {
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(-46px);}
+    100%{transform: translateY(0px);}
+  }
+  .bitcoin-ion-icon label::after {content: ''; width: 0; height: 0; border-width: 14px; border-style: solid; border-color:#87a2ff transparent transparent transparent; position: absolute; transform: rotate(-270deg); left:-28px;}
+  .bitcoin-ion-icon label i {font-size: 52px; color:#001e60; text-shadow: 0 0 3px #001e60;}
+  .bitcoin-ion-icon label span {position: relative; color: #001e60; margin-left:8px; text-shadow: 0 0 2px #001e60;}  
+
+  
+ .etherium-icon { position: absolute; right:370px; bottom:-110px; width: 90px; height: 96px; background:#87a2ff; box-shadow: 0 0 14px black;  border-radius: 17px; display: flex; flex-direction: column;align-items: center; justify-content: center; cursor: pointer; line-height: 20px; animation: etherium 6s linear infinite;}
+  @keyframes etherium{
+    0%{transform: translateX(0px);}
+    50%{transform: translateX(70px);}
+    100%{transform: translateX(0px);}
+  }
+  
+  .etherium-icon::before {content: ''; width: 0; height: 0; border-width: 10px; border-style: solid; border-color:#87a2ff transparent transparent transparent; position: absolute; top:-20px; transform: rotate(180deg);}
+
+
+ .etherium-icon li {position: relative; list-style: none; text-align: center; }
+ .etherium-icon i {font-size: 38px; color: #001e60; text-shadow:0 0 2px #001e60; animation: rotate 4s linear infinite;}
+ @keyframes rotate {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+ }
+ .etherium-icon li h5 {position: relative; color:#001e60; text-shadow: 0 0 2px #001e60;}
+
+
+
+@media only screen and (max-width: 1150px) {
+  .container-kapsam {width: 98%;}
+
+  .bitcoin-ion-icon i {font-size: 320px;}
+
+   .bitcoin-ion-icon label{margin-top: -89px; }
+  .etherium-icon i {font-size: 30px;}
+   .etherium-icon{left:90px;}
+  .bitcoin-ion-icon {margin-right: 13px;}
+
+
+  main label {max-width:380px;}
+  .main-icon{width: 380px;}
+   main label h3 {font-size: 24px;}
+}
+@media only screen and (max-width:1000px){
+
+  .etherium-icon{display: none;}
+  .bitcoin-ion-icon i {font-size: 340px;}
+   .etherium-icon i {font-size: 32px;}
+    .bitcoin-ion-icon label {position: absolute; top: 10px; width: 198px; height:65px;}
+    .bitcoin-ion-icon label::after{transform: rotate(0deg); bottom: -25px; left: 83px;}
+     @keyframes kara {
+    
+    0%{transform: translateX(0px);}
+    50%{transform: translateX(-46px);}
+    100%{transform: translateX(0px);}
+}
+
+
+}
+
+@media only screen and (max-width:950px){
+ header label {margin-right:2px; margin-left: 15px;}
+}
+@media only screen and (max-width:885px){
+  
+ header label {margin-left: 10px;}
+ header label h4 {font-size: 15px; margin-right: 17px;}
+ header label h3{font-size: 16px; letter-spacing: 0px; padding-left: 8px;padding-right: 8px;}
+  main label {max-width:364px;}
+  .main-icon{width: 364px;}
+}
+@media only screen and (max-width:790px){
+ 
+    main label {max-width:310px;}
+    .main-icon{width:310px;}
+    main label {font-size: 19px;}
+   main label h3{font-size: 19px;}
+
+   .bitcoin-ion-icon i {font-size: 280px;}
+   .etherium-icon i {font-size: 30px;}
+}
+@media only screen and (max-width:714px){
+
+ header label {margin-left: 5px; margin-right: 2px;}
+ header label h4 {font-size: 15px; margin-right: 6px;}
+ header label h3{font-size: 16px; letter-spacing: 0px; padding-left: 8px;padding-right: 8px;}
+}
+
+@media only screen and (max-width:665px){
+ 
+
+ header label {margin-left: 5px; margin-right: 2px;}
+ header label h4 {font-size: 13px; margin-right: 6px;}
+ header label h3{font-size: 14px; letter-spacing: 0px; padding-left: 8px;padding-right: 8px;}
+}
+@media only screen and (max-width:635px){
+ 
+
+ header label {margin-left: 3px; margin-right: 2px;}
+ header label h4 {font-size: 12px; margin-right: 3px;}
+ header label h3{font-size: 13px; letter-spacing: 0px; padding-left: 8px;padding-right: 8px;}
+}
+@media only screen and (max-width:570px){
+  
+
+ header label {margin-left: 3px; margin-right: 2px;}
+ header label h4 {font-size: 11px; margin-right: 3px;  padding-left:7px; padding-right:7px; }
+ header label h3{font-size: 12px; letter-spacing: 0px; padding-left: 5px;padding-right:5px;}
+}
+
+@media only screen and (max-width: 688px){
+  
+  main label {max-width:280px;}
+    .main-icon{width:280px;}
+    main label {font-size: 17px;}
+   main label h3{font-size: 19px;}
+}
+@media only screen and (max-width: 620px){
+ 
+  main label {max-width:270px;}
+    .main-icon{width:270px;}
+    main label {font-size: 18px; margin-left: 8px;}
+   main label h3{font-size: 17px;}
+
+  .bitcoin-ion-icon{margin-right: 1px;}
+   .bitcoin-ion-icon i {font-size: 250px;}
+  
+}
+@media only screen and (max-width: 570px){
+ 
+  main label {max-width:250px;}
+    .main-icon{width:250px;}
+    main label {font-size: 16px; margin-left: 8px;}
+   main label h3{font-size: 16.5px;}
+
+  .bitcoin-ion-icon{margin-right: 1px;}
+   .bitcoin-ion-icon i {font-size: 250px;}
+  
+}
+@media only screen and (max-width: 532px){
+
+  main label {max-width:230px;}
+    .main-icon{width:230px;}
+    main label {font-size: 13.5px; margin-left: 8px;}
+   main label h3{font-size: 15px;}
+
+  .bitcoin-ion-icon{margin-right: 1px;}
+   .bitcoin-ion-icon i {font-size: 200px;}
+  
+}
+</style>
+</head>
+<body>
+  <div class="container-ortala">
+       <div class="container-kapsam">
+           <header>
+              <label>
+                   <span><i class="fa-brands fa-bitcoin"></i></span>
+                  <span><h3>CRYPTO ŞAHİN</h3></span>
+              </label>
+
+               <label>
+                 <span class="header-active active"><h4>ABOUT</h4></span>
+                 <span class="header-active"><h4>PRICING</h4></span>
+                 <span class="header-active"><h4>CONTACT US</h4></span>
+                 <span class="header-active"><h4>SIGN UP</h4></span>
+                
+               </label>
+           </header>
+
+          
+
+<div class="container-kapsam2">
+   
+          <main>
+            <div class="main-icon">
+               <ion-icon name="logo-bitcoin"></ion-icon>
+            </div>
+              
+              <label><h3>Make your Crypto Transaction</h3></label>
+              <label><h4>Buy and Sales 100+ Cryptocurrencies with 20+ flat currencies market using bank transfers or your credit/debit card in your exchange type bitcoin establshed token area.</h4></label>
+              <label><h5>GET STARTED</h5></label>
+                
+
+             <ul>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+             </ul>
+
+
+
+          </main>
+
+
+
+          <div class="container-menü">
+              <div class="bitcoin-ion-icon">
+                  <i class="fa-brands fa-bitcoin"></i>
+             
+               
+                 <label>
+                       <i class="fa-brands fa-bitcoin"></i>
+                       <span>
+                         <h4>40M+</h4>
+                        <h4>SOLİD TOKEN</h4>
+                       </span>
+                </label>
+                 
+
+                 <div class="etherium-icon">
+                    <i class="fa-brands fa-ethereum"></i>
+                    <li>
+                      <h5>ETHERİUM</h5>
+                      <h5>18M+</h5>
+                    </li>
+                 </div>
+                 
+
+
+
+              </div>
+           </div>
+       
+
+</div>
+
+
+       </div>
+  </div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  const headerspan = document.querySelectorAll('.header-active');
+  function activeLink(){
+    headerspan.forEach((item) =>
+    item.classList.remove('active'));
+    this.classList.add('active');
+  }
+  headerspan.forEach((item) =>
+  item.addEventListener('click',activeLink));
+</script>
+</body>
+</html>
