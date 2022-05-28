@@ -11,10 +11,10 @@
   * {margin: 0; padding: 0; box-sizing: border-box; font-family:sans-serif; font-weight: bold;}
   body {background: #00276a;}
   body::-webkit-scrollbar {width: 8px;}
-  body::-webkit-scrollbar-thumb {background:#001e60; border-radius: 10px;}
-  body::-webkit-scrollbar-track {background:black;}
+  body::-webkit-scrollbar-thumb {background:#87a2ff; border-radius: 10px;}
+  body::-webkit-scrollbar-track {background: #00276a;}
   .container-ortala {position: relative; display: flex; align-items: center; justify-content: center; margin-top: 30px;}
-  .container-kapsam  {position: relative; width: 1100px; height:auto; padding-bottom: 14px;  background:#001e60; box-shadow: 0 0 16px black; border-radius: 17px; }
+  .container-kapsam  {position: relative; width: 1100px; height:auto; padding-bottom: 14px;  background:#001e60; box-shadow: 0 0 16px black; border-radius: 17px; overflow: hidden;}
 
   header {position: relative; width:100%; height: 78px; background:#001e60; box-shadow: 0 0 20px #001e60; border-radius: 13px 13px 0px 0px; display: flex; align-items: center; justify-content: space-between; border-bottom:1px solid black; }
   header label {position: relative; display: flex; align-items: center; cursor: pointer; margin-left: 30px; margin-right: 30px;}
@@ -29,7 +29,7 @@
   header label h4:hover {transform: scale(1.03);}
   header label .header-active {display: flex; align-items: center; justify-content: center;}
   
-  .container-kapsam2 {position: relative; width: 100%;  display: flex;  }
+  .container-kapsam2 {position: relative; width: 100%;  display:flex;  }
   
 
   main {position: relative; width:100%; height: 100%; display: flex; flex-direction: column; justify-content: center; }
@@ -52,7 +52,7 @@
   
 
   main ul {position:relative; list-style-type: none; display: flex; margin-top: 210px;  margin-left:20px;}
-  main ul li {position: relative; width:21px; height: 21px; border-radius:50%; background:#87a2ff; box-shadow: 0 0 5px #87a2ff; margin: 11px; cursor: pointer;}
+  main ul li {position: relative; width:21px; height: 21px; border-radius:50%; background:#87a2ff; box-shadow: 0 0 5px #87a2ff; margin: 11px; cursor: pointer; z-index: 100000;}
 
 
 
@@ -94,6 +94,44 @@
  }
  .etherium-icon li h5 {position: relative; color:#001e60; text-shadow: 0 0 2px #001e60;}
 
+
+
+.container-kapsam3-ortala{width: 100%; display: flex; align-items: center; justify-content: center;}
+.container-kapsam3{position: absolute; top: 0; left: 0;width: 100%; height:calc(100% - 78px); top: 78px;  background:#001e60; left: 100%; z-index: 1000; transition: 0.6s;}
+.container-kapsam3.active {left: 0;}
+.coin-price{position: relative; width: 100%; height: 100%;}
+.coin-price-header {position: relative; width: 100%; height: 50px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid black;}
+.coin-price-header span {position: relative; cursor: pointer; margin-left: 10px; margin-right: 10px; color: white; text-shadow: 0 0 2px white;}
+
+
+.coin-price-nav{width: 100%; height:calc(100% - 64px);background:none; overflow: hidden auto;}
+.coin-price-nav::-webkit-scrollbar {width:6px; }
+.coin-price-nav::-webkit-scrollbar-thumb {background:none; border-radius: 10px;}
+.coin-price-nav:hover::-webkit-scrollbar-thumb{background: #87a2ff;}
+.coin-price-nav::-webkit-scrollbar-track {background:#00276a;}
+.coin-price-nav ul {list-style-type: none; display: flex; align-items: center; justify-content: space-between; height: 64px; border-bottom: 2px solid #87a2ff; cursor: pointer;}
+.coin-price-nav ul:hover {background: #00276a; box-shadow: 0 0 12px  #00276a;}
+.coin-price-nav ul li {position: relative;  display: flex; align-items: center; cursor: pointer; color: var(--clr); text-shadow: 0 0 2px var(--clr); margin-left: 10px; margin-right: 10px;}
+.coin-price-nav ul li img {width: 60px; height: 60px;}
+
+
+
+
+.container-kapsam4{width: 100%; height: calc(100% - 78px); background: #001e60; position: absolute; left: 0; top: 78px; display: flex; flex-wrap: wrap; justify-content: space-between; overflow: hidden auto; left: 100%; transition: 0.6s; }
+.container-kapsam4.active {left: 0px;}
+.container-kapsam4::-webkit-scrollbar {width:6px; }
+.container-kapsam4::-webkit-scrollbar-thumb {background:#87a2ff; border-radius: 10px;}
+
+.container-kapsam4::-webkit-scrollbar-track {background:#00276a;}
+.container-kapsam4-div {position: relative; width: 320px; height:160px; background:#87a2ff; box-shadow: 0 0 14px #87a2ff; border-radius: 12px; display: flex; align-items: center; margin-left:20px; margin-right: 20px; margin-top: 20PX; }
+.container-kapsam4-div:hover {transform: scale(1.03);}
+.container-kapsam4-div label {position: relative; cursor:pointer; color: #001e60; text-shadow: 0 0 2px #001e60; line-height: 30px; left: 12px; }
+.container-kapsam4-div label i {font-size:72px;}
+.container-kapsam4-div label img {width: 69px; height: 69px;}
+
+.container-kapsam4-div h2 {position: absolute; right:11px; top:9px; color:#001e60; text-shadow: 0 0 2px #001e60; cursor: pointer;}
+.container-kapsam4-div h1 {position: absolute; right:11px; bottom:12px; color: var(--clr); text-shadow: 0 0 2px var(--clr); font-size: 22px; cursor: pointer;}
+.container-kapsam4-div span {width: 50%; height: 4px; background:var(--clr); box-shadow: 0 0 5px var(--clr); position: absolute; right: 22px; cursor: pointer;}
 
 
 @media only screen and (max-width: 1150px) {
@@ -259,6 +297,20 @@
     main label h5 {width: 80px; height:30px; font-size: 10px;}
     .main-icon ion-icon{font-size: 100px;}
   }
+
+
+  @media only screen and (max-width:740px) {
+  
+    .container-kapsam4 {justify-content: center;}
+  }
+
+    @media only screen and (max-width:620px) {
+
+   
+    .coin-price-header span {font-size: 13px;}
+    .coin-price-nav ul li {font-size: 14px;}
+    .coin-price-nav ul li img {width: 44px; height: 44px;}
+  }
 </style>
 </head>
 <body>
@@ -279,7 +331,6 @@
                </label>
            </header>
 
-          
 
 <div class="container-kapsam2">
    
@@ -294,11 +345,12 @@
                 
 
              <ul>
-               <li></li>
-               <li></li>
-               <li></li>
-               <li></li>
+               <li class="open-container1"></li>
+               <li class="open-container3"></li>
+               <li class="open-container4"></li>
              </ul>
+
+
 
 
 
@@ -338,6 +390,151 @@
 </div>
 
 
+
+<div class="container-kapsam3-ortala">
+  <div class="container-kapsam3">
+  <div class="coin-price">
+     <div class="coin-price-header">
+           <span><h3>NAME</h3></span>
+           <span><h3>PRİCE</h3></span>
+           <span><h3>MARKET</h3></span>
+           <span><h3>MARKET VALUE</h3></span> 
+     </div>
+
+
+
+
+     <div class="coin-price-nav">
+        <ul>
+          <li style="--clr:#87a2ff;"><img src="https://www.paribu.com/app-assets/symbols/usdt-dark.png"><h4>TETHER</h4></li>
+          <li style="--clr:#87a2ff;"><h4>$2.023</h4></li>
+          <li style="--clr:green;"><h4>+2.50</h4></li>
+          <li style="--clr:#87a2ff;"><h4>200.005M</h4></li>
+        </ul>
+
+        <ul>
+          <li style="--clr:#87a2ff;"><img src="https://www.paribu.com/app-assets/symbols/doge-dark.png"><h4>DOGECOİN</h4></li>
+          <li style="--clr:#87a2ff;"><h4>$20.223</h4></li>
+          <li style="--clr:red;"><h4>-1.07</h4></li>
+          <li style="--clr:#87a2ff;"><h4>340.005M</h4></li>
+        </ul>
+
+
+        <ul>
+          <li style="--clr:#87a2ff;"><img src="https://www.paribu.com/app-assets/symbols/btc-dark.png"><h4>BİTCOİN</h4></li>
+          <li style="--clr:#87a2ff;"><h4>$100.080</h4></li>
+          <li style="--clr:red;"><h4>-4.06</h4></li>
+          <li style="--clr:#87a2ff;"><h4>700.005M</h4></li>
+        </ul>
+
+        <ul>
+          <li style="--clr:#87a2ff;"><img src="https://www.paribu.com/app-assets/symbols/shib-dark.png"><h4>SHİBA</h4></li>
+          <li style="--clr:#87a2ff;"><h4>$40.023</h4></li>
+          <li style="--clr:green;"><h4>+1.20</h4></li>
+          <li style="--clr:#87a2ff;"><h4>120.005M</h4></li>
+        </ul>
+
+        <ul>
+          <li style="--clr:#87a2ff;"><img src="https://www.paribu.com/app-assets/symbols/sol-dark.png"><h4>SOLONA</h4></li>
+          <li style="--clr:#87a2ff;"><h4>$1.05</h4></li>
+          <li style="--clr:red;"><h4>-0.20</h4></li>
+          <li style="--clr:#87a2ff;"><h4>35.020M</h4></li>
+        </ul>
+
+        <ul>
+          <li style="--clr:#87a2ff;"><img src="https://www.paribu.com/app-assets/symbols/xlm-dark.png"><h4>STELLAR</h4></li>
+          <li style="--clr:#87a2ff;"><h4>$1.010</h4></li>
+          <li style="--clr:red;"><h4>-5.08</h4></li>
+          <li style="--clr:#87a2ff;"><h4>5.124M</h4></li>
+        </ul>
+
+        <ul>
+          <li style="--clr:#87a2ff;"><img src="https://www.paribu.com/app-assets/symbols/waves-dark.png"><h4>WAWES</h4></li>
+          <li style="--clr:#87a2ff;"><h4>$4.145</h4></li>
+          <li style="--clr:red;"><h4>-1.02</h4></li>
+          <li style="--clr:#87a2ff;"><h4>6.349M</h4></li>
+        </ul>
+
+        <ul>
+          <li style="--clr:#87a2ff;"><img src="https://www.paribu.com/app-assets/symbols/ada-dark.png"><h4>CARDANO</h4></li>
+          <li style="--clr:#87a2ff;"><h4>$4.580</h4></li>
+          <li style="--clr:green;"><h4>+3.26</h4></li>
+          <li style="--clr:#87a2ff;"><h4>10.392M</h4></li>
+        </ul>
+        <ul>
+          <li style="--clr:#87a2ff;"><img src="https://www.paribu.com/app-assets/symbols/uni-dark.png"><h4>UNİSWAP</h4></li>
+          <li style="--clr:#87a2ff;"><h4>$6.450</h4></li>
+          <li style="--clr:red;"><h4>-1.58</h4></li>
+          <li style="--clr:#87a2ff;"><h4>22.130M</h4></li>
+        </ul>
+
+        <ul>
+          <li style="--clr:#87a2ff;"><img src="https://www.paribu.com/app-assets/symbols/eos-dark.png"><h4>EOS</h4></li>
+          <li style="--clr:#87a2ff;"><h4>$2.150</h4></li>
+          <li style="--clr:red;"><h4>-7.10</h4></li>
+          <li style="--clr:#87a2ff;"><h4>18.100M</h4></li>
+        </ul>
+     </div>
+  </div>
+</div>
+
+</div>
+
+
+  
+  <div class="container-kapsam4">
+        <div class="container-kapsam4-div">
+            <label><i class="fa-brands fa-bitcoin"></i><h3>BİTCOİN</h3><h4>USD28835</h4></label>
+            <h2>24H</h2>
+            <h1 style="--clr:darkred;">-0.28%</h1>
+            <span style="--clr:darkred;"></span>
+        </div>
+       
+
+        <div class="container-kapsam4-div">
+            <label><i class="fa-brands fa-ethereum"></i><h3>ETHERİUM</h3><h4>USD15535</h4></label>
+            <h2>24H</h2>
+            <h1 style="--clr:green;">+1.15%</h1>
+            <span style="--clr:green;"></span>
+        </div>
+
+
+         <div class="container-kapsam4-div">
+            <label><img src="https://www.paribu.com/app-assets/symbols/uni-dark.png"><h3>ÜNİSWAP</h3><h4>USD4835</h4></label>
+            <h2>24H</h2>
+            <h1 style="--clr:darkred;">-0.28%</h1>
+            <span style="--clr:darkred;"></span>
+        </div>
+
+
+         <div class="container-kapsam4-div">
+            <label><img src="https://assets.coingecko.com/coins/images/325/large/Tether-logo.png?1598003707"><h3>TETHER</h3><h4>USD8835</h4></label>
+            <h2>24H</h2>
+            <h1 style="--clr:darkred;">-0.28%</h1>
+            <span style="--clr:darkred;"></span>
+        </div>
+
+        <div class="container-kapsam4-div">
+            <label><img src="https://www.paribu.com/app-assets/symbols/shib-dark.png"><h3>SHİBA</h3><h4>USD16830</h4></label>
+            <h2>24H</h2>
+            <h1 style="--clr:green;">-0.28%</h1>
+            <span style="--clr:green;"></span>
+        </div>
+
+        <div class="container-kapsam4-div">
+            <label><img src="https://www.paribu.com/app-assets/symbols/ada-dark.png"><h3>CARDANO</h3><h4>USD3422</h4></label>
+            <h2>24H</h2>
+            <h1 style="--clr:darkred;">-0.28%</h1>
+            <span style="--clr:darkred;"></span>
+        </div>
+
+  </div>
+
+
+
+
+
+
        </div>
   </div>
 
@@ -349,6 +546,12 @@
 
 
 <script type="text/javascript">
+  const opencontainer1 = document.querySelector('.open-container1');
+  const opencontainer3 = document.querySelector('.open-container3');
+  const opencontainer4 = document.querySelector('.open-container4');
+  const containerkapsam3 = document.querySelector('.container-kapsam3');
+  const containerkapsam4 = document.querySelector('.container-kapsam4');
+
   const headerspan = document.querySelectorAll('.header-active');
   function activeLink(){
     headerspan.forEach((item) =>
@@ -357,6 +560,23 @@
   }
   headerspan.forEach((item) =>
   item.addEventListener('click',activeLink));
+ 
+ 
+opencontainer1.addEventListener('click',()=>{
+  containerkapsam3.classList.remove('active');
+  containerkapsam4.classList.remove('active');
+
+})
+ opencontainer3.addEventListener('click',() =>{
+   containerkapsam3.classList.add('active');
+   containerkapsam4.classList.remove('active');
+ })
+ opencontainer4.addEventListener('click',()=>{
+    containerkapsam4.classList.add('active');
+     containerkapsam3.classList.remove('active');
+  })
+ 
+ 
 </script>
 </body>
 </html>
